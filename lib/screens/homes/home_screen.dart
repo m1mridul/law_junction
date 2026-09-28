@@ -311,7 +311,8 @@ class HomeScreen extends StatelessWidget {
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 4,
         crossAxisSpacing: 10,
-        childAspectRatio: 0.85,
+        mainAxisSpacing: 10,
+        mainAxisExtent: 100,
       ),
       itemBuilder: (context, index) {
         return InkWell(
@@ -333,8 +334,8 @@ class HomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  height: 42,
-                  width: 42,
+                  height: 38,
+                  width: 38,
                   decoration: BoxDecoration(
                     color: primary.withValues(alpha: 0.09),
                     shape: BoxShape.circle,
@@ -345,7 +346,7 @@ class HomeScreen extends StatelessWidget {
                     size: 22,
                   ),
                 ),
-                const SizedBox(height: 8),
+                const SizedBox(height: 6),
                 Text(
                   services[index]['title'] as String,
                   textAlign: TextAlign.center,
